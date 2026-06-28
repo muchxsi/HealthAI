@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>HealthAI</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+<div class="row">
+
+    <div class="col-md-2 sidebar">
+
+        <div class="logo mb-4">
+
+            🏥 HealthAI
+
+        </div>
+
+        <a href="/" class="d-block mb-2">
+
+            <i class="bi bi-speedometer2"></i>
+
+            Dashboard
+
+        </a>
+
+        {% if current_user.role in ['admin', 'doctor', 'receptionist'] %}
+
+        <a href="/patients/" class="d-block mb-2">
+
+            <i class="bi bi-people"></i>
+
+            Patients
+
+        </a>
+
+        {% endif %}
+
+        {% if current_user.role == 'admin' %}
+
+        <a href="/doctors/" class="d-block mb-2">
+
+            <i class="bi bi-person-badge"></i>
+
+            Doctors
+
+        </a>
+
+        {% endif %}
+
+        {% if current_user.role in ['admin', 'doctor', 'receptionist'] %}
+
+        <a href="/appointments/" class="d-block mb-2">
+
+            <i class="bi bi-calendar-check"></i>
+
+            Appointments
+
+        </a>
+
+        {% endif %}
+
+        {% if current_user.role in ['admin', 'lab_technician'] %}
+
+        <a href="/laboratory/" class="d-block mb-2">
+
+            <i class="bi bi-eyedropper"></i>
+
+            Laboratory
+
+        </a>
+
+        {% endif %}
+
+        {% if current_user.role in ['admin', 'pharmacist'] %}
+
+        <a href="/pharmacy/" class="d-block mb-2">
+
+            <i class="bi bi-capsule"></i>
+
+            Pharmacy
+
+        </a>
+
+        {% endif %}
+
+        {% if current_user.role in ['admin', 'receptionist'] %}
+
+        <a href="/billing/" class="d-block mb-2">
+
+            <i class="bi bi-receipt"></i>
+
+            Billing
+
+        </a>
+
+        {% endif %}
+
+        {% if current_user.role == 'admin' %}
+
+        <a href="/ai/" class="d-block mb-2">
+
+            <i class="bi bi-robot"></i>
+
+            AI Assistant
+
+        </a>
+
+        {% endif %}
+
+        <hr>
+
+        <div class="small text-muted mb-2">
+
+            Logged in as
+
+        </div>
+
+        <div class="fw-bold mb-3">
+
+            {{ current_user.username }}
+
+        </div>
+
+        <div class="badge bg-primary">
+
+            {{ current_user.role }}
+
+        </div>
+
+    </div>
+
+    <div class="col-md-10 p-4">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

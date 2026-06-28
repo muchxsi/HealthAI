@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+<div class="col-lg-8">
+
+<div class="card shadow border-0">
+
+    <div class="card-header bg-warning text-dark">
+
+        <h3>
+            Edit Laboratory Test
+        </h3>
+
+    </div>
+
+    <div class="card-body">
+
+        <form method="POST">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Patient
+                </label>
+
+                <select
+                    name="patient_id"
+                    class="form-select"
+                    required>
+
+                    {% for patient in patients %}
+
+                    <option
+                        value="{{ patient.id }}"
+                        {% if patient.id == test.patient_id %}
+                        selected
+                        {% endif %}>
+
+                        {{ patient.first_name }}
+                        {{ patient.last_name }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Test Name
+                </label>
+
+                <input
+                    type="text"
+                    name="test_name"
+                    class="form-control"
+                    value="{{ test.test_name }}"
+                    required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Test Result
+                </label>
+
+                <textarea
+                    name="test_result"
+                    class="form-control"
+                    rows="4"
+                    required>{{ test.test_result }}</textarea>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Status
+                </label>
+
+                <select
+                    name="status"
+                    class="form-select">
+
+                    <option
+                        value="Pending"
+                        {% if test.status == "Pending" %}
+                        selected
+                        {% endif %}>
+                        Pending
+                    </option>
+
+                    <option
+                        value="Completed"
+                        {% if test.status == "Completed" %}
+                        selected
+                        {% endif %}>
+                        Completed
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-warning">
+
+                Update Test
+
+            </button>
+
+            <a href="/laboratory/"
+               class="btn btn-secondary">
+
+                Cancel
+
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
