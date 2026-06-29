@@ -1,0 +1,43 @@
+.notify-card{
+
+    background:#10243d;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    color:white;
+
+    margin-top:30px;
+
+}
+
+.notify-card h3{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+.notify-item{
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    border-radius:12px;
+
+    background:#16304d;
+
+    transition:.3s;
+
+}
+
+.notify-item:hover{
+
+    background:#1d4ed8;
+
+}

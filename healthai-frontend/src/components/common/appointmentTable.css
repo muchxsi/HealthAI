@@ -1,0 +1,85 @@
+.appointments-card{
+
+    margin-top:30px;
+
+    background:#10243d;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    color:white;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+.table-header{
+
+    margin-bottom:20px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    text-align:left;
+
+    color:#9fb3c8;
+
+    padding:15px 10px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+td{
+
+    padding:18px 10px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.badge{
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.completed{
+
+    background:#16a34a;
+
+}
+
+.waiting{
+
+    background:#f59e0b;
+
+}
+
+.progress{
+
+    background:#2563eb;
+
+}
+
+.scheduled{
+
+    background:#9333ea;
+
+}

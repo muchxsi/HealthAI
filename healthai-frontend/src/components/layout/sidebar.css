@@ -1,0 +1,191 @@
+.sidebar{
+
+    width:280px;
+
+    height:100vh;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    background:linear-gradient(180deg,#08111f,#12263f);
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+    padding:28px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    box-shadow:10px 0 30px rgba(0,0,0,.25);
+
+}
+
+.logo{
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+    padding-bottom:25px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.menu-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    color:#b8c7d9;
+
+    font-weight:500;
+
+    text-decoration:none;
+
+    transition:all .30s ease;
+
+}
+
+.menu-item:hover{
+
+    background:#1d4ed8;
+
+    color:white;
+
+    transform:translateX(6px);
+
+    box-shadow:0 8px 20px rgba(37,99,235,.35);
+
+}
+
+.menu-item.active{
+
+    background:linear-gradient(90deg,#2563eb,#3b82f6);
+
+    color:white;
+
+    box-shadow:0 8px 20px rgba(37,99,235,.35);
+
+}
+
+.icon{
+
+    font-size:20px;
+
+    width:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.sidebar-footer{
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.user-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:rgba(255,255,255,.05);
+
+    padding:14px;
+
+    border-radius:14px;
+
+}
+
+.avatar{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+}
+
+.user-info h4{
+
+    color:white;
+
+    margin:0;
+
+}
+
+.user-info p{
+
+    margin:3px 0 0;
+
+    color:#9fb3c8;
+
+    font-size:13px;
+
+}
+
+@media(max-width:992px){
+
+.sidebar{
+
+    transform:translateX(-100%);
+
+    transition:.4s;
+
+}
+
+}

@@ -1,0 +1,67 @@
+/* ===========================
+   HealthAI Global Styles
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#0d6efd;
+    --secondary:#14213d;
+    --background:#07121f;
+    --surface:#10243d;
+    --success:#22c55e;
+    --danger:#ef4444;
+    --warning:#f59e0b;
+    --text:#ffffff;
+    --muted:#b5c0d0;
+
+}
+
+body{
+
+    font-family:Inter,Segoe UI,Arial,sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    border:none;
+
+}
+
+input{
+
+    outline:none;
+
+}
+
+.container-fluid{
+
+    padding:0;
+
+}

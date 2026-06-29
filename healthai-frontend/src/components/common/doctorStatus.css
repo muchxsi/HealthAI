@@ -1,0 +1,25 @@
+.doctor-card{
+
+    margin-top:30px;
+
+    background:#10243d;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    color:white;
+
+}
+
+.doctor-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:15px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}

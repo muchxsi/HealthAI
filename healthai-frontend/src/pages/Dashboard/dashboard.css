@@ -1,0 +1,418 @@
+.page-title{
+
+    color:white;
+
+    margin-bottom:30px;
+
+}
+
+.hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+
+    padding:35px 40px;
+
+    border-radius:24px;
+
+    color:white;
+
+    margin-bottom:35px;
+
+    box-shadow:0 20px 40px rgba(37,99,235,.25);
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+.hero p{
+
+    color:#dbeafe;
+
+    font-size:17px;
+
+}
+
+.hero span{
+
+    color:#ffd166;
+
+}
+
+.new-btn{
+
+    border:none;
+
+    background:white;
+
+    color:#2563eb;
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.new-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:24px;
+
+    margin-bottom:35px;
+
+}
+
+.card-box{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    transition:.3s;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+.card-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(37,99,235,.18);
+
+}
+
+.icon-circle{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:26px;
+
+    margin-bottom:18px;
+
+}
+
+.card-box h3{
+
+    color:#64748b;
+
+    font-size:17px;
+
+}
+
+.card-box h1{
+
+    color:#07121f;
+
+    margin:18px 0;
+
+    font-size:38px;
+
+}
+
+.card-box small{
+
+    color:#16a34a;
+
+    font-weight:600;
+
+}
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:24px;
+
+    margin-top:35px;
+
+}
+
+.activity,
+.status{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+.activity h3,
+.status h3{
+
+    color:#07121f;
+
+    margin-bottom:20px;
+
+}
+
+.activity ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.activity li{
+
+    padding:14px 0;
+
+    border-bottom:1px solid #edf2f7;
+
+    color:#475569;
+
+}
+
+.status h1{
+
+    color:#16a34a;
+
+    margin:20px 0;
+
+}
+
+.status p{
+
+    color:#64748b;
+
+}
+
+.recent-patients{
+
+    margin-top:35px;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+.recent-patients h3{
+
+    color:#07121f;
+
+    margin-bottom:20px;
+
+}
+
+.patients-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.patients-table th{
+
+    background:#f8fafc;
+
+    color:#64748b;
+
+    padding:15px;
+
+    text-align:left;
+
+}
+
+.patients-table td{
+
+    padding:15px;
+
+    border-bottom:1px solid #edf2f7;
+
+    color:#334155;
+
+}
+
+.patients-table tr:hover{
+
+    background:#f8fafc;
+
+}
+
+@media(max-width:992px){
+
+.hero{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.dashboard-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
+.performance{
+
+    margin-top:35px;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+.performance h3{
+
+    margin-bottom:30px;
+
+    color:#07121f;
+
+}
+
+.progress-item{
+
+    margin-bottom:25px;
+
+}
+
+.progress-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+.progress-bar{
+
+    width:100%;
+
+    height:12px;
+
+    background:#e2e8f0;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    border-radius:20px;
+
+    animation:grow 1.5s ease;
+
+}
+
+.blue{
+
+    background:#2563eb;
+
+}
+
+.green{
+
+    background:#16a34a;
+
+}
+
+.orange{
+
+    background:#f59e0b;
+
+}
+
+.purple{
+
+    background:#9333ea;
+
+}
+
+@keyframes grow{
+
+    from{
+
+        width:0;
+
+    }
+
+}
